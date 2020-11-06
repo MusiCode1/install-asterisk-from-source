@@ -2,7 +2,7 @@
 
 ASTERISK_VER=18
 URL=https://downloads.asterisk.org/pub/telephony/asterisk
-GZ_FILE=/mnt/d/Projects/Code/asterisk/asterisk-18.0.1.tar.gz
+GZ_FILE=asterisk.tar.gz
 
 # exit when any command fails
 set -e
@@ -17,7 +17,7 @@ apt-get clean
 
 cd /tmp/
 
-#curl -o ${GZ_FILE} ${URL}/asterisk-${ASTERISK_VER}-current.tar.gz
+curl -o ${GZ_FILE} ${URL}/asterisk-${ASTERISK_VER}-current.tar.gz
 tar xf ${GZ_FILE}
 
 dirname=$(ls /tmp/ | grep "asterisk-${ASTERISK_VER}\.")
